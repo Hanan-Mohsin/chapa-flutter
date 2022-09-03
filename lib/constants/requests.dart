@@ -37,6 +37,7 @@ Future<String> intilizeMyPayment(
     },
   );
   var jsonResponse = json.decode(response.body);
+  print("reponse from chapa: ${jsonResponse}");
   if (response.statusCode == 400) {
     showToast(jsonResponse);
   } else if (response.statusCode == 200) {
